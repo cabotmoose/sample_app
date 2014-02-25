@@ -4,7 +4,7 @@ ruby '2.1.0'
 
 gem 'rails', '4.0.3'
 
-gem 'foundation'
+gem 'foundation-rails'
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'
