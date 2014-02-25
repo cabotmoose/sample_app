@@ -6,7 +6,7 @@
           <!-- Title Area -->
           <li class="name"></li>
           <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-          <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+          <li class="toggle-topbar menu-icon"><%= link_to "Home", root_path %><span></span></a></li>
         </ul>
         <section class="top-bar-section">
           <!-- Left Nav Section -->
@@ -15,10 +15,10 @@
           </ul>
           <!-- Right Nav Section -->
            <ul class="right">
-            <li><a href="#home">Home</a></li>
+            <li><%= link_to "Home", root_path %></li>
             <li><a href="#features">Features</a></li>
             <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#signup">Sign-Up</a></li>
+            <li><%= link_to "About", about_path %></li>
           </ul>
         </section>
       </nav>
