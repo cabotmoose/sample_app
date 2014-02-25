@@ -4,14 +4,14 @@ describe "Static pages" do
 
 	describe "Home page" do
 
-		it "should have the content 'Sample App'" do 
+		it "should have the content 'Social Discount'" do 
 			visit '/static_pages/home'
-			expect(page).to have_content('Sample App')
+			expect(page).to have_content('Social Discount')
 		end
 
-		it "should have the title 'Home'" do 
+		it "should have the base title" do 
 			visit '/static_pages/home'
-			expect(page).to have_title("Social Discount | Home")
+			expect(page).to have_title("Social Discount")
 		end
 	end
 
