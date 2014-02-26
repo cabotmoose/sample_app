@@ -1,30 +1,19 @@
 require 'spec_helper'
 
-describe "Static pages" do 
+describe "Static pages" do
 
-	describe "Home page" do
+  subject { page }
 
-		it "should have the content 'Social Discount'" do 
-			visit '/static_pages/home'
-			expect(page).to have_content('Social Discount')
-		end
+  describe "Home page" do
+    before { visit root_path }
 
-		it "should have the base title" do 
-			visit '/static_pages/home'
-			expect(page).to have_title("Social Discount")
-		end
-	end
+    it { should have_title(full_title('')) }
+    it { should_not have_title('| Home') }
+  end
 
-	describe "About page" do
+  describe "About page" do
+    before { visit about_path }
 
-		it "should have the content 'About Us'" do 
-			visit '/static_pages/about'
-			expect(page).to have_content('About Us')
-		end
-
-		it "should have the title 'About Us'" do 
-			visit '/static_pages/about'
-			expect(page).to have_title("Social Discount | About Us")
-		end
-	end
+    it { should have_title(full_title('About Us')) }
+  end
 end
