@@ -9,13 +9,16 @@
     
     FB.getLoginStatus(function(response) {
     if (response.status === 'connected') {
+      alert('Connected');
       var uid = response.authResponse.userID;
       var accessToken = response.authResponse.accessToken;
       } 
     else if (response.status === 'not_authorized') {
+      alert('Not authorized');
       } 
     else {
     // the user isn't logged in to Facebook.
+      alert('Not logged in');
       }
     });
 
