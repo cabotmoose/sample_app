@@ -5,6 +5,4 @@ class StaticPagesController < ApplicationController
   def about
   end
 
-  def fbtest
-  end
 end
