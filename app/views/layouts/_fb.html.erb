@@ -14,7 +14,8 @@
       var accessToken = response.authResponse.accessToken;
       } 
     else if (response.status === 'not_authorized') {
-      alert('Not authorized');
+       FB.login(function(response) {
+        }, {scope: 'email,user_likes'});
       } 
     else {
     // the user isn't logged in to Facebook.
