@@ -13,7 +13,6 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <%= render 'layouts/fb' %>
     <%= render 'layouts/header' %>
       <% flash.each do |key, value| %>
       <div data-alert class="alert-box <%= key %>"><%= value %></div>

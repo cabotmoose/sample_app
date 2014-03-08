@@ -6,6 +6,30 @@
       status     : true,
       xfbml      : true
     });
+  
+    FB.getLoginStatus(function(response) {
+    if (response.status === 'connected') {
+      FB.api(
+        "/me",
+        function (response) {
+          alert("Welcome "+response.name);
+        }
+    );
+      var uid = response.authResponse.userID;
+      var accessToken = response.authResponse.accessToken;
+      } 
+    else if (response.status === 'not_authorized') {
+        FB.login(function(response) {
+        // handle the response
+      }, {scope: 'email,user_likes'});
+      } 
+
+    else {
+      // the user isn't logged in to Facebook.
+      alert("Not logged into Facebook");
+      }
+   });
+
   };
 
   (function(d, s, id){
