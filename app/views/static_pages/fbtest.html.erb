@@ -1,15 +1,82 @@
-<!--<%= render 'layouts/fb' %> -->
+<%= render 'layouts/fb' %>
 <% provide(:title, 'Demonstration') %>
 <div class="row">
   <div class="large-10 columns large-centered">
-    <div class="content" id="img-text">
-      </br>
-      </br>
+    <div class="content" id="img-text-black">
+      <br/>
       Demonstration
     </div>
   </div>
 </div>
-
+<br/>
+<br/>
+<br/>
+<div class="row">
+  <div class="large-6 columns">
+    <h3>Sample Checkout Process</h3>
+  </div>
+  <div class="large-6 columns">
+    <h4>Order Summary</h4>
+    <br/>
+    <div class="row">
+      <div class="large-4 columns">
+        <img src="http://placehold.it/140x100">
+      </div>
+      <div class="large-8 columns">
+        <br/>
+        <br/>
+        <h5>Basic Widget</h5>
+      </div>
+    </div>
+    <br/>
+    <div class="row">
+      <div class="large-10 columns" id="cart-list">
+        <h5>Item Price:</h5>
+      </div>
+      <div class="large-2 columns">
+        <h5>$85.00</h5>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-10 columns" id="cart-list">
+        <h4><small>Shipping:</small></h4>
+      </div>
+      <div class="large-2 columns">
+        <h4><small>$10.00</small></h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-10 columns" id="cart-list">
+        <h4><small>Taxes:</small></h4>
+      </div>
+      <div class="large-2 columns">
+        <h4><small>$5.00</small></h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-10 columns" id="cart-list">
+        <h5><strong>Total:</strong></h5>
+      </div>
+      <div class="large-2 columns">
+        <h5><strong>$100.00</strong></h5>
+      </div>
+    </div>
+    <br/>
+    <!-- Insert FB Social Plugin -->
+    <div class="row">
+      <div class="large-6 columns">
+        <span data-tooltip class="has-tip" title="First click the Facebook login button (nothing will be posted), then click GetSocialDiscount to calculate your discount">Show your friends, get a discount!</span>
+      </div>
+      <div class="large-2 columns">
+        <fb:login-button show-faces="false" width="200" max-rows="1"></fb:login-button>
+      </div>
+      <div class="large-4 columns">
+        <a href="#" class="button radius tiny" id="sd_button">Get SocialDiscount</a>
+      </div>
+    </div>
+    <br/>
+  </div>
+</div>
 <script>
     document.write('<script src=' +
             ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
