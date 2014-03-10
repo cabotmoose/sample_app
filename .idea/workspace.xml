@@ -61,7 +61,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
+<<<<<<< HEAD
         <entry key="$PROJECT_DIR$" value="develop" />
+=======
+        <entry key="$PROJECT_DIR$" value="staging" />
+>>>>>>> develop
       </map>
     </option>
   </component>
