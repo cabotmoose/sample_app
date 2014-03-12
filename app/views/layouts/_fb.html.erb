@@ -32,9 +32,16 @@
    }(document, 'script', 'facebook-jssdk'));
 
   function fbConnected() {
-      FB.api('/me', function(response) {
-          //Insert SocialDiscount logic here
+      FB.api("/me/friends", function(response) {
+          document.getElementById('friends').innerHTML = response.data.length;
       });
+      //FB.api('/me', function(response) {
+        //  var fbName = document.getElementById('fbName');
+          //var fbLogout = document.getElementById('fbLogout');
+         // fbName.innerHTML = "Logged in as <a href='https://www.facebook.com/"+response.username+"'>"+response.first_name+"</a>";
+          //fbLogout.innerHTML = "<input type='button' value='Logout' onclick='fbLogout()'/>";
+     // });
+
   }
 
 </script>
