@@ -62,4 +62,15 @@
       });
   }
 
+
+  function sdRequire () {
+      FB.api({ method: 'pages.isFan', page_id: '648601535199138' }, function(resp) {
+          if (resp) {
+              document.getElementById('sdSuccess').innerHTML = "Submit Order";
+          } else {
+
+          }
+      });
+  }
+
 </script>
