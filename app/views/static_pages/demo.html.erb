@@ -86,7 +86,7 @@
       </div>
       <div class="large-2 columns" id="sd-row">
         <!--<fb:login-button data-size="small" show-faces="false" width="200" max-rows="1"></fb:login-button>-->
-        <h5>$0.00</h5>
+        <h5 id="discountAmt">$0.00</h5>
       </div>
     </div>
     <br/>
@@ -94,15 +94,13 @@
     <div class="row">
       <div class="large-12 columns large-centered" id="cart-list">
         <div id="myModal" class="reveal-modal" data-reveal>
-          <h2 id="features">Select Your Price</h2>
-          <!--<p class="lead">Your couch.  It is mine.</p>
-          <p>Im a cool paragraph that lives inside of an even cooler modal. Wins</p>-->
+          <h2 id="features">Select Your Total</h2>
           <div class="row">
             <div class="large-6 columns">
               <div class="panel callout radius">
                 <h3 id="features">SOCIALDISCOUNT</h3>
                 <br/>
-                <h3 id="features">$95.00</h3>
+                <div id="features"><h3 id="sdTotal">$100.00</h3></div>
                 <br/>
                 <h5>To receive this price, SocialDiscount will do the following on your behalf:</h5>
                 <ul class="disc">
@@ -122,6 +120,7 @@
                 <h4 id="features">$100.00</h4>
                 <br/>
                 <br/>
+                <h5>Nothing will be posted to your Facebook profile</h5>
                 <br/>
                 <br/>
                 <div class="cta-wrapper" id="submit">
@@ -133,8 +132,6 @@
           <a class="close-reveal-modal">&#215;</a>
         </div>
         <a href="#" class="small success button" data-reveal-id="myModal" data-reveal>Select Pricing Type</a>
-        <br/>
-        You have <strong id="friends">?</strong>.
       </div>
     </div>
     <br/>

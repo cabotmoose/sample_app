@@ -31,17 +31,35 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 
+
   function fbConnected() {
       FB.api("/me/friends", function(response) {
-          document.getElementById('friends').innerHTML = response.data.length;
-      });
+          var numFriends = response.data.length;
+          //document.getElementById('friends').innerHTML = response.data.length;
+
+
+      if (numFriends < 200) {
+          document.getElementById('discountAmt').innerHTML = "$2.00";
+          document.getElementById('sdTotal').innerHTML = "$98.00";
+      }
+      else if (numFriends >= 200 && numFriends < 500) {
+          document.getElementById('discountAmt').innerHTML = "$4.00";
+          document.getElementById('sdTotal').innerHTML = "$96.00";
+      }
+      else if (numFriends >= 500) {
+          document.getElementById('discountAmt').innerHTML = "$6.00";
+          document.getElementById('sdTotal').innerHTML = "$94.00";
+      }
+      else
+          document.getElementById('friends').innerHTML = "$0.00";
+
       //FB.api('/me', function(response) {
         //  var fbName = document.getElementById('fbName');
           //var fbLogout = document.getElementById('fbLogout');
          // fbName.innerHTML = "Logged in as <a href='https://www.facebook.com/"+response.username+"'>"+response.first_name+"</a>";
           //fbLogout.innerHTML = "<input type='button' value='Logout' onclick='fbLogout()'/>";
      // });
-
+      });
   }
 
 </script>
