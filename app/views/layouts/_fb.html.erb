@@ -53,24 +53,28 @@
       else
           document.getElementById('friends').innerHTML = "$0.00";
 
-      //FB.api('/me', function(response) {
-        //  var fbName = document.getElementById('fbName');
-          //var fbLogout = document.getElementById('fbLogout');
-         // fbName.innerHTML = "Logged in as <a href='https://www.facebook.com/"+response.username+"'>"+response.first_name+"</a>";
-          //fbLogout.innerHTML = "<input type='button' value='Logout' onclick='fbLogout()'/>";
-     // });
       });
-  }
+    }
 
 
-  function sdRequire () {
-      FB.api({ method: 'pages.isFan', page_id: '648601535199138' }, function(resp) {
-          if (resp) {
-              document.getElementById('sdSuccess').innerHTML = "Submit Order";
-          } else {
 
+    function sdSubmit() {
+      FB.login(function(response){
+          FB.api('/me/permissions', function(response) {
+          console.log(response);                      
+
+          if(response.data[0].publish_actions)
+          {
+              alert('Proceed to checkout page, where post is shared upon successful order');
           }
-      });
-  }
+          else
+          {
+              alert('To receive the SocialDiscount price, you must allow us to post on your behalf');
+          }
+        }); 
+      }, {scope: 'publish_actions'});
+    }
+    
 
+  
 </script>
