@@ -6,6 +6,8 @@ gem 'rails', '4.0.3'
 
 gem 'foundation-rails'
 
+gem 'newrelic_rpm'
+
 group :development, :test do
   gem 'sqlite3', '1.3.8'
   gem 'rspec-rails', '2.13.1'
