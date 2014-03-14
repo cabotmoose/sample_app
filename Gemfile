@@ -8,6 +8,8 @@ gem 'foundation-rails'
 
 gem 'newrelic_rpm'
 
+gem 'jquery-turbolinks'
+
 group :development, :test do
   gem 'sqlite3', '1.3.8'
   gem 'rspec-rails', '2.13.1'
